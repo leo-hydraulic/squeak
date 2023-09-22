@@ -3,8 +3,10 @@ const { app, BrowserWindow } = require('electron')
 require('update-electron-app')({
   updateInterval: '5 minutes',
 })
+const log = require('electron-log');
 
 function createWindow () {
+  log.info("about to start: %s", process.argv);
   const win = new BrowserWindow({
     width: 800,
     height: 600,
