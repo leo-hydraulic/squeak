@@ -1,3 +1,4 @@
+if(require('electron-squirrel-startup')) return;
 const { app, BrowserWindow } = require('electron')
 require('update-electron-app')()
 
