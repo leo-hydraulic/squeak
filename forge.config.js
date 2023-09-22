@@ -8,7 +8,9 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         certificateFile: './windows.pfx',
-        certificatePassword: process.env.CERTIFICATE_PASSWORD
+        certificatePassword: process.env.CERTIFICATE_PASSWORD,
+        icon: "app.ico",
+        setupIcon: "app.ico"
       },
     },
     {

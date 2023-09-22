@@ -11,6 +11,11 @@ function createWindow () {
   })
 
   win.loadFile('index.html')
+  const version = app.getVersion()
+  win.webContents.executeJavaScript(`
+    const elem = document.querySelector('#app-version');
+    elem.textContent = '${version}';
+  `);
 }
 
 app.whenReady().then(createWindow)
