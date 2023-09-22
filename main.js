@@ -1,6 +1,8 @@
 if(require('electron-squirrel-startup')) return;
 const { app, BrowserWindow } = require('electron')
-require('update-electron-app')()
+require('update-electron-app')({
+  updateInterval: '5 minutes',
+})
 
 function createWindow () {
   const win = new BrowserWindow({
