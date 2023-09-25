@@ -6,7 +6,7 @@ require('update-electron-app')({
 const log = require('electron-log');
 
 function createWindow () {
-  log.info("about to start: %s", process.argv);
+  log.info("about to start: %s\n%s\n%s", process.argv, process.env, process);
   const win = new BrowserWindow({
     width: 800,
     height: 600,
